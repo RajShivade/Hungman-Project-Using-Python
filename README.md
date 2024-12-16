@@ -1,6 +1,6 @@
-# Hangman Project Using Python :
+# Hangman Project Using Python :-
 
-# Project Structure
+# Project Structure:
 The project consists of a single Python script that contains all the necessary code to run the Hangman game. The main components of the game logic include:
 
 - **Word Selection:** Randomly selecting a word from a predefined list.
@@ -15,7 +15,7 @@ import random
 
 words_list = ['python', 'hangman', 'programming', 'data', 'science']
 word = random.choice(words_list).upper()
-# 2. Game Loop
+# 2. Game Loop:
 The main game loop handles user inputs and updates the game state accordingly. The player is prompted to guess a letter, and the game checks if the letter is in the word.
 attempts = 6
 guessed = False
@@ -26,7 +26,7 @@ word_completion = "_" * len(word)
 while not guessed and attempts > 0:
     guess = input("Please guess a letter or word: ").upper()
     # Logic to handle guesses
-# 3. Display Functions
+# 3. Display Functions:
 Functions to display the current state of the game, including the word with guessed letters and remaining attempts, are used to provide feedback to the player.
 def display_hangman(attempts):
     # Visual representation of hangman based on the number of attempts left
@@ -34,7 +34,7 @@ def display_hangman(attempts):
 
 def display_word_completion(word_completion):
     print("Current word: " + " ".join(word_completion))
-# 4. Win/Loss Conditions
+# 4. Win/Loss Conditions:
 The game checks if the player has successfully guessed the word or if they have run out of attempts.
 if "_" not in word_completion:
     guessed = True
